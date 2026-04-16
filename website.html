@@ -15,22 +15,18 @@
             --text-dim: #B0B0B0;
             --nav-bg: rgba(0, 0, 0, 0.98);
         }
-
-        * {
+        {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Inter', 'Segoe UI', sans-serif;
         }
-
         body {
             background-color: var(--dark-black);
             color: var(--text-white);
             line-height: 1.6;
             overflow-x: hidden;
         }
-
-        /* --- Navigation --- */
         nav {
             background: var(--nav-bg);
             position: fixed;
@@ -39,14 +35,12 @@
             z-index: 2000;
             border-bottom: 2px solid var(--primary-orange);
         }
-
         .nav-container {
             padding: 0.8rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .nav-logo {
             font-size: 1.4rem;
             font-weight: 800;
@@ -55,8 +49,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
-        /* --- Dynamic Tabs Bar --- */
         .tabs-bar {
             background: #161616;
             display: flex;
@@ -64,7 +56,6 @@
             gap: 5px;
             border-bottom: 1px solid #333;
         }
-
         .tab {
             padding: 12px 20px;
             color: var(--text-dim);
@@ -73,56 +64,44 @@
             font-weight: 600;
             transition: 0.3s;
             border-bottom: 3px solid transparent;
-            display: none; /* Hidden by default */
+            display: none;
             align-items: center;
             gap: 8px;
         }
-
         .tab.active {
             color: var(--primary-orange);
             border-bottom: 3px solid var(--primary-orange);
             background: rgba(255, 152, 0, 0.05);
             display: flex;
         }
-
         .tab.visible {
             display: flex;
         }
-
         .tab:hover {
             color: var(--text-white);
             background: var(--hover-grey);
         }
-
-        /* --- Main Layout Sections --- */
         section {
-            padding: 140px 8% 60px; /* Increased top padding for tabs */
+            padding: 140px 8% 60px; 
             min-height: 100vh;
             display: none; 
         }
-
         .active-section {
             display: block;
             animation: slideUp 0.4s ease-out;
         }
-
         @keyframes slideUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* --- Home Screen --- */
         #home-section {
             text-align: center;
         }
-
         .hero-title {
             font-size: 3.5rem;
             margin-bottom: 10px;
         }
-
         .hero-title span { color: var(--primary-orange); }
-
         .main-event-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -131,7 +110,6 @@
             max-width: 1100px;
             margin: 50px auto;
         }
-
         .main-card {
             background: var(--card-grey);
             padding: 60px 30px;
@@ -140,7 +118,6 @@
             cursor: pointer;
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-
         .main-card:hover {
             border-color: var(--primary-orange);
             transform: scale(1.02);
@@ -153,15 +130,12 @@
             color: var(--primary-orange);
             margin-bottom: 20px;
         }
-
-        /* --- Event Grid --- */
         .event-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
-
         .sub-event-card {
             background: var(--card-grey);
             padding: 25px;
@@ -170,13 +144,10 @@
             transition: 0.3s;
             cursor: pointer;
         }
-
         .sub-event-card:hover {
             background: var(--hover-grey);
             transform: translateY(-5px);
         }
-
-        /* --- Details & Forms --- */
         .detail-wrapper {
             max-width: 900px;
             margin: 0 auto;
@@ -184,9 +155,7 @@
             border-radius: 15px;
             border: 1px solid #333;
         }
-
         .detail-content { padding: 40px; }
-
         .form-container {
             max-width: 600px;
             margin: 0 auto;
@@ -195,13 +164,11 @@
             border-radius: 15px;
             border: 1px solid #333;
         }
-
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; margin-bottom: 8px; color: var(--primary-orange); font-weight: 600; }
         .form-group input, .form-group select {
             width: 100%; padding: 12px; background: #121212; border: 1px solid #444; color: white; border-radius: 5px;
         }
-
         .btn-action {
             background: var(--primary-orange);
             color: black;
@@ -215,12 +182,10 @@
             text-transform: uppercase;
             transition: 0.3s;
         }
-
         .btn-action:hover {
             background: #e68a00;
             letter-spacing: 1px;
         }
-
         footer {
             padding: 40px;
             text-align: center;
@@ -228,26 +193,20 @@
             color: var(--text-dim);
             border-top: 1px solid #222;
         }
-
         @media (max-width: 768px) {
             .main-event-container { grid-template-columns: 1fr; }
             .hero-title { font-size: 2.2rem; }
-            .tab span { display: none; } /* Hide text on small screens, icons only */
+            .tab span { display: none; } 
         }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="nav-container">
-<<<<<<< HEAD
+< HEAD>
             <div class="nav-logo" onclick="resetToHome()">BTI Bangalore</div>
-=======
             <div class="nav-logo" onclick="resetToHome()"> INNOVATION HUB </div>
->>>>>>> 0b5389a4bb58ef5fd12307495185544c4c9dd795
         </div>
-        
-        <!-- DYNAMIC TABS -->
         <div class="tabs-bar" id="tabs-bar">
             <div class="tab active visible" id="tab-home" onclick="resetToHome()">
                 <i class="fas fa-home"></i> <span>Home</span>
@@ -263,24 +222,16 @@
             </div>
         </div>
     </nav>
-
-    <!-- HOME SECTION -->
     <section id="home-section" class="active-section">
 <<<<<<< HEAD
         <h1 class="hero-title">THE BTI <span>NEXUS 2026</span></h1>
-=======
         <h1 class="hero-title">THE <span>NEXUS 2026</span></h1>
->>>>>>> 0b5389a4bb58ef5fd12307495185544c4c9dd795
         <p style="color: var(--text-dim); font-size: 1.2rem;">Choose your path to Lead | Innovate | Excellence.</p>
-        
         <div class="main-event-container">
             <div class="main-card" onclick="openEventList('SkillSprint')">
                 <i class="fas fa-bolt"></i>
-<<<<<<< HEAD
                 <h2>SkillSprint</h2>
-=======
                 <h2>Compile & Conquer</h2>
->>>>>>> 0b5389a4bb58ef5fd12307495185544c4c9dd795
                 <p>Technical Challenges & Coding</p>
             </div>
             <div class="main-card" onclick="openEventList('TalentTornado')">
@@ -290,8 +241,6 @@
             </div>
         </div>
     </section>
-
-    <!-- EVENT LIST SECTION -->
     <section id="list-section">
         <div style="text-align: center; margin-bottom: 40px;">
             <h2 id="category-title" style="font-size: 2.5rem; color: var(--primary-orange);">Events</h2>
@@ -299,13 +248,9 @@
         </div>
         <div class="event-grid" id="event-grid"></div>
     </section>
-
-    <!-- DETAIL SECTION -->
     <section id="detail-section">
         <div class="detail-wrapper" id="detail-content"></div>
     </section>
-
-    <!-- REGISTRATION SECTION -->
     <section id="registration-section">
         <div class="form-container">
             <h2 style="color: var(--primary-orange); margin-bottom: 25px; text-align: center;">Registration Form</h2>
@@ -336,15 +281,11 @@
             </form>
         </div>
     </section>
-
     <footer>
 <<<<<<< HEAD
         <p>&copy; 2024 Bangalore Technological Institute. Built for Excellence.</p>
-=======
         <p>&copy; . Built for Excellence.</p>
->>>>>>> 0b5389a4bb58ef5fd12307495185544c4c9dd795
     </footer>
-
     <script>
         const allEvents = [
             { id: 1, cat: 'SkillSprint', name: "Code-A-Thon", icon: "fa-code", desc: "A 6-hour intense coding marathon to solve real-world problems.", rules: ["Individual participation", "Languages: C++, Java, Python", "No external libraries"], contact: "Prof. Rajesh: 9900887766" },
@@ -353,20 +294,13 @@
             { id: 11, cat: 'TalentTornado', name: "Startup Pitch", icon: "fa-lightbulb", desc: "Present your business idea to a panel of investors.", rules: ["5 mins pitch", "Slides required", "Business plan copy"], contact: "MBA Dept: 7766554433" },
             { id: 12, cat: 'TalentTornado', name: "Art Expo", icon: "fa-paint-brush", desc: "Showcase your paintings and digital art.", rules: ["Original work only", "Physical submission"], contact: "Arts Club" },
             { id: 14, cat: 'TalentTornado', name: "Fashion Walk", icon: "fa-tshirt", desc: "The grand carnival fashion show.", rules: ["Theme: Futuristic", "6 mins per team"], contact: "Cultural Team" }
-        ];
-
-        // Global State
+        ]
         let currentCategory = "";
         let selectedEvent = null;
-
         function updateTabs(activeId) {
-            // Remove 'active' class from all tabs
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            
-            // Set current tab as active
             if(activeId === 'home-section') {
                 document.getElementById('tab-home').classList.add('active');
-                // Hide other tabs when going home
                 document.getElementById('tab-list').classList.remove('visible');
                 document.getElementById('tab-detail').classList.remove('visible');
                 document.getElementById('tab-reg').classList.remove('visible');
@@ -384,29 +318,24 @@
                 document.getElementById('tab-reg').classList.add('active', 'visible');
             }
         }
-
         function showSection(sectionId) {
             document.querySelectorAll('section').forEach(sec => sec.classList.remove('active-section'));
             document.getElementById(sectionId).classList.add('active-section');
             updateTabs(sectionId);
             window.scrollTo(0,0);
         }
-
         function resetToHome() {
             currentCategory = "";
             selectedEvent = null;
             showSection('home-section');
         }
-
         function openEventList(category) {
             currentCategory = category;
             const grid = document.getElementById('event-grid');
             const title = document.getElementById('category-title');
             title.innerText = (category === 'SkillSprint') ? "SkillSprint Carnival" : "TalentTornado Expo";
-            
             grid.innerHTML = '';
             const filtered = allEvents.filter(e => e.cat === category);
-            
             filtered.forEach(event => {
                 grid.innerHTML += `
                     <div class="sub-event-card" onclick="openDetail(${event.id})">
@@ -418,12 +347,10 @@
             });
             showSection('list-section');
         }
-
         function openDetail(id) {
             const event = allEvents.find(e => e.id === id);
             selectedEvent = event;
             const container = document.getElementById('detail-content');
-            
             container.innerHTML = `
                 <div class="detail-content">
                     <h2 style="font-size: 2.5rem; color: var(--primary-orange);">${event.name}</h2>
@@ -433,22 +360,18 @@
                     <ul style="margin-bottom: 30px; padding-left: 20px; color: var(--text-dim);">
                         ${event.rules.map(r => `<li style="margin-bottom:10px;">${r}</li>`).join('')}
                     </ul>
-
                     <div style="background: rgba(255, 152, 0, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary-orange);">
                         <strong><i class="fas fa-phone"></i> Organizer Contact:</strong> ${event.contact}
                     </div>
-
                     <button class="btn-action" style="margin-top: 30px;" onclick="openRegistration('${event.name}')">Proceed to Register</button>
                 </div>
             `;
             showSection('detail-section');
         }
-
         function openRegistration(eventName) {
             document.getElementById('reg-event-name').value = eventName;
             showSection('registration-section');
         }
-
         function handleForm(e) {
             e.preventDefault();
             alert("Success! You have registered for " + document.getElementById('reg-event-name').value);
@@ -456,7 +379,7 @@
         }
     </script>
 </body>
-<<<<<<< HEAD
+</HEAD>
 </html>
 =======
 </html>

@@ -29,4 +29,4 @@ Since this is a frontend-only project without complex build tools, running it is
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/chidananda-p/nexus-2026-portal.git](https://github.com/chidananda-p/nexus-2026-portal.git)
+   git clone [https://github.com/chidananda-p/Nexus-Event-Web-Page](https://github.com/chidananda-p/Nexus-Event-Web-Page)

@@ -23,9 +23,9 @@ The portal features a modern dark-mode UI with vibrant orange accents (`#FF9800`
 * **Vanilla JavaScript (ES6):** State management, DOM manipulation, dynamic HTML generation, and event handling.
 * **FontAwesome:** Scalable vector icons for the UI.
 
-## 🚀 How to Run Locally
+## 🚀 Demo
 
-Since this is a frontend-only project without complex build tools, running it is incredibly simple:
+
 
 1. **Clone the repository:**
    ```bash
